@@ -10,7 +10,6 @@ const RoundedSpinningCube = () => {
       </div>
       <style jsx>{`
         .loader {
-          perspective: 600px;
           width: 25px;
           height: 25px;
         }
@@ -39,6 +38,20 @@ const RoundedSpinningCube = () => {
 
           100% {
             transform: rotateX(360deg) rotateY(360deg);
+          }
+        }
+
+        @media not all and (min-width: 640px) {
+          .loader {
+            display: none;
+          }
+
+          .cube {
+            display: none;
+          }
+
+          .face {
+            display: none;
           }
         }
       `}</style>

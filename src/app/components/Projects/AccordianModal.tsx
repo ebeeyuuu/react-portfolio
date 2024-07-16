@@ -47,7 +47,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
   const handleToggle = (index: number) => setActive(index);
 
   return (
-    <section className="image-accordion flex justify-center">
+    <section className="image-accordion flex justify-center smooth-animation">
       <style jsx>{`
         .image-accordion {
           display: flex;
@@ -64,7 +64,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
           display: flex;
           align-items: flex-end;
           opacity: ${imagesLoaded ? 1 : 0}; /* Hide images until loaded */
-          transition: opacity 0.5s ease; /* Smooth transition */
+          transition: opacity 500ms ease; /* Smooth transition */
         }
 
         .image-accordion-item:hover {
@@ -115,7 +115,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
           align-items: center;
           gap: 14px;
           background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-          transition: 0.25s;
+          transition: 500ms;
         }
 
         .image-accordion-item.active .content {
