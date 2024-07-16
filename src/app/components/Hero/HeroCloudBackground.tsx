@@ -36,7 +36,7 @@ const HeroCloudBackground: React.FC = () => {
     });
 
     return gradientRef.current.destroy;
-  }, [canvasRef.current]);
+  }, []);
 
   return (
     <canvas

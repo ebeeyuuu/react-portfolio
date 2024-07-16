@@ -21,13 +21,13 @@ interface Cube {
 
 const SpinningCube: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const cubeRef = useRef<Cube>(createCube(0, 0, 4, 1.5));
   const angleX = 2 * Math.PI / 360;
   const angleY = 2 * Math.PI / 720;
   const angleZ = 2 * Math.PI / 1480;
   let rotX = true;
   let rotY = true;
   let rotZ = false;
-  let cube = createCube(0, 0, 4, 1.5);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,15 +37,15 @@ const SpinningCube: React.FC = () => {
         const update = () => {
           context.clearRect(0, 0, canvas.width, canvas.height);
           if (rotZ) {
-            cube = rotateCubeZ(cube, angleZ);
+            cubeRef.current = rotateCubeZ(cubeRef.current, angleZ);
           }
           if (rotY) {
-            cube = rotateCubeY(cube, angleY);
+            cubeRef.current = rotateCubeY(cubeRef.current, angleY);
           }
           if (rotX) {
-            cube = rotateCubeX(cube, angleX);
+            cubeRef.current = rotateCubeX(cubeRef.current, angleX);
           }
-          drawCube(cube, context, canvas);
+          drawCube(cubeRef.current, context, canvas);
           requestAnimationFrame(update);
         };
         requestAnimationFrame(update);
@@ -115,7 +115,7 @@ function rotateY(p: Point3D, start: Point3D, angleY: number): Point3D {
 
 function rotateCubeZ(cube: Cube, angleZ: number): Cube {
   return {
-   ...cube,
+    ...cube,
     bl: rotateZ(cube.bl, cube.start, angleZ),
     br: rotateZ(cube.br, cube.start, angleZ),
     tl: rotateZ(cube.tl, cube.start, angleZ),
@@ -129,7 +129,7 @@ function rotateCubeZ(cube: Cube, angleZ: number): Cube {
 
 function rotateCubeX(cube: Cube, angleX: number): Cube {
   return {
-   ...cube,
+    ...cube,
     bl: rotateX(cube.bl, cube.start, angleX),
     br: rotateX(cube.br, cube.start, angleX),
     tl: rotateX(cube.tl, cube.start, angleX),
@@ -143,7 +143,7 @@ function rotateCubeX(cube: Cube, angleX: number): Cube {
 
 function rotateCubeY(cube: Cube, angleY: number): Cube {
   return {
-   ...cube,
+    ...cube,
     bl: rotateY(cube.bl, cube.start, angleY),
     br: rotateY(cube.br, cube.start, angleY),
     tl: rotateY(cube.tl, cube.start, angleY),

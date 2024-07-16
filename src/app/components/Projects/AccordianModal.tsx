@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface Item {
   image: string;
@@ -161,9 +162,8 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
             className={`image-accordion-item ${isActive}`}
             onClick={() => handleToggle(index)}
           >
-            <img src={item.image} />
+            <Image src={item.image} alt={item.header} layout="fill" objectFit="cover" className="image-accordion-item-img" />
             <div className="content">
-
               <div>
                 <h2>{item.header}</h2>
                 <p>{item.text}</p>

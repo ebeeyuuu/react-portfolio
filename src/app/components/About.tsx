@@ -19,7 +19,7 @@ const About = () => {
         <div className="flex flex-row mt-10 max-[1022px]:flex-col max-[1000px]:items-center">
           <div className="font-semibold text-2xl ml-12 max-[1000px]:ml-[-10px] max-[1000px]:justify-center">Education:</div>
           <div className="flex ml-auto mr-10 mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5 max-[1000px]:ml-0 max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
-            I spent a decade at Surabaya European School, benefiting from its vibrant, inclusive environment that values academic excellence and cultural diversity. Passionate educators foster a love for learning through engaging lessons, with a curriculum integrating disciplines from math and science to arts and languages. Extracurricular activities offer opportunities in sports, music, and community service. The school's commitment to holistic development nurtures critical thinking, creativity, and global awareness, preparing us for academic success and the dynamic world ahead.
+            I spent a decade at Surabaya European School, benefiting from its vibrant, inclusive environment that values academic excellence and cultural diversity. Passionate educators foster a love for learning through engaging lessons, with a curriculum integrating disciplines from math and science to arts and languages. Extracurricular activities offer opportunities in sports, music, and community service. The school&apos;s commitment to holistic development nurtures critical thinking, creativity, and global awareness, preparing us for academic success and the dynamic world ahead.
           </div>
         </div>
 
