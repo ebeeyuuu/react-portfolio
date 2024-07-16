@@ -27,24 +27,24 @@ const ContactWheel = () => {
       <div className="up">
         <a href="https://www.instagram.com/ebee.yuuu/" target="_blank">
           <button className="card1">
-            <InstagramIcon className="text-black hover:text-white smooth-animation"/>
+            <InstagramIcon className="text-black"/>
           </button>
         </a>
         <a href="https://x.com/ebeeyuuuu" target="_blank">
           <button className="card2">
-            <TwitterIcon className="text-black hover:text-white smooth-animation"/>
+            <TwitterIcon className="text-black"/>
           </button>
         </a>
       </div>
       <div className="down">
         <a href="https://github.com/ebeeyuuu" target="_blank">
           <button className="card3">
-            <GithubIcon className="text-black hover:text-white smooth-animation"/>
+            <GithubIcon className="text-black"/>
           </button>
         </a>
         <a href="" onClick={handleCopyDiscordId}>
           <button className="card4">
-            <DiscordIcon className="text-black hover:text-white smooth-animation"/>
+            <DiscordIcon className="text-black"/>
           </button>
         </a>
       </div>
@@ -95,23 +95,7 @@ const ContactWheel = () => {
         .card3:hover,
         .card4:hover {
           cursor: pointer;
-          transform: scale(1.1);
-        }
-
-        .card1:hover {
-          background-color: #cc39a4;
-        }
-
-        .card2:hover {
-          background-color: #03a9f4;
-        }
-
-        .card3:hover {
-          background-color: #d4d4d4;
-        }
-
-        .card4:hover {
-          background-color: #8c9eff;
+          transform: scale(1.2);
         }
       `}</style>
     </div>
