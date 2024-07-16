@@ -6,7 +6,7 @@ interface WaveCardProps {
 
 const WaveCard: React.FC<WaveCardProps> = ({ children }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center max-sm:items-center">
       <div className="card playing flex flex-col gap-y-10 mt-24 w-[calc(100vw-20rem)] min-w-[400px] max-w-[800px] bg-[#020202]/60 h-[1190px] rounded-2xl smooth-animation playing max-[1027px]:h-[1290px] max-[850px]:h-[1430px] max-[800px]:h-[1790px] relative overflow-hidden shadow-card">
         {children}
         <div className="wave"></div>
