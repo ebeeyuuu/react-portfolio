@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .smooth-animation {
+    transition: all 500ms ease-in-out;
+  }
+}
+
+body {
+  background: #020202;
+  color: #fff;
+}
+
+body::-webkit-scrollbar {
+  background-color: #020202;
+  width: 0px;
+}
+
+#btn {
+  --color1: black;
+  --color2: #1c1c1c;
+  perspective: 1000px;
+  padding: 1em;
+  background: linear-gradient(var(--color1), var(--color2));
+  border: none;
+  outline: none;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 0 10px 10px #000;
+  cursor: pointer;
+  transform: rotateX(70deg) rotateZ(30deg);
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  position: relative; /* Ensure the pseudo-elements position correctly */
+}
+
+#btn::before,
+#btn::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+}
+
+#btn::before {
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
+
+#btn::after {
+  width: 15px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: rotateY(-90deg);
+  transform-origin: right;
+}
+
+#btn:hover {
+  transform: rotateX(30deg) rotateZ(0);
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dark-wave-clip {
+  clip-path: polygon(
+    48.281% 11.34%,
+    48.281% 11.34%,
+    45.487% 12.003%,
+    40.98% 13.496%,
+    35.234% 15.608%,
+    28.721% 18.127%,
+    21.914% 20.839%,
+    15.285% 23.535%,
+    9.307% 26%,
+    4.451% 28.024%,
+    1.192% 29.393%,
+    0% 29.897%,
+    0% 100%,
+    0% 100%,
+    1.175% 99.43%,
+    4.391% 97.882%,
+    9.188% 95.594%,
+    15.105% 92.808%,
+    21.68% 89.764%,
+    28.451% 86.703%,
+    34.958% 83.864%,
+    40.74% 81.488%,
+    45.335% 79.816%,
+    48.281% 79.087%,
+    48.281% 79.087%,
+    49.939% 79.166%,
+    51.061% 79.688%,
+    51.779% 80.545%,
+    52.221% 81.632%,
+    52.52% 82.842%,
+    52.804% 84.071%,
+    53.204% 85.211%,
+    53.851% 86.156%,
+    54.875% 86.801%,
+    56.406% 87.04%,
+    56.406% 87.04%,
+    59.108% 86.429%,
+    63.28% 84.773%,
+    68.51% 82.332%,
+    74.384% 79.367%,
+    80.488% 76.141%,
+    86.41% 72.915%,
+    91.735% 69.951%,
+    96.051% 67.51%,
+    98.944% 65.853%,
+    100% 65.243%,
+    100% 0.147%,
+    100% 0.147%,
+    98.898% 0.658%,
+    95.886% 2.044%,
+    91.411% 4.084%,
+    85.915% 6.557%,
+    79.844% 9.242%,
+    73.641% 11.918%,
+    67.752% 14.364%,
+    62.62% 16.359%,
+    58.69% 17.683%,
+    56.406% 18.115%,
+    56.406% 18.115%,
+    55.276% 17.838%,
+    54.451% 17.241%,
+    53.844% 16.41%,
+    53.366% 15.433%,
+    52.93% 14.396%,
+    52.446% 13.386%,
+    51.828% 12.488%,
+    50.986% 11.79%,
+    49.833% 11.379%,
+    48.281% 11.34%
+  );
+  background: radial-gradient(circle at 30% 20%, #d7410f, transparent 80%),
+    radial-gradient(circle at 70% 80%, #334acb, transparent 80%);
+  background-size: 200% 100%;
+  animation: moveGradient 40s linear infinite;
+}
