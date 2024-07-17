@@ -14,6 +14,12 @@ const Contact = () => {
           </div>
           <ContactWheel />
         </div>
+        <div className="font-mono text-sm font-light text-center">
+          Built by Ean James Yu
+        </div>
+        <div className="font-mono text-sm font-light text-center">
+          with React, Next.JS and Tailwind CSS
+        </div>
       </div>
     </div>
   )
