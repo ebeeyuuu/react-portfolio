@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +30,10 @@ export default function RootLayout({
       <meta name="twitter:description" content="Explore Ean James Yu's portfolio showcasing creative design, photography, and more!" />
       <meta name="twitter:image" content="/portfolio-collage.jpg" />
       <link rel="icon" href="/favicon.ico" />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />  
+      </body>
     </html>
   );
 }
