@@ -5,7 +5,7 @@ import RoundedSpinningCube  from "./Projects/RoundedSpinningCube"
 
 const Projects = () => {
   return (
-    <div className="flex justify-center items-center mt-[200px] max-[770px]:mt-[100px] w-full">
+    <div id="projects" className="flex justify-center items-center mt-[200px] max-[770px]:mt-[100px] w-full">
       <div className="flex flex-col mb-[200px]">
         <div className="text-4xl max-lg:text-3xl max-md:justify-center font-semibold mb-[100px] max-sm:mb-[50px] flex flex-row gap-x-[125px]">
           <div className="mt-[-30px]">
