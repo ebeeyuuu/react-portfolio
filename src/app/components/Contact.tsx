@@ -3,7 +3,7 @@ import ContactWheel from './Contact/ContactWheel'
 
 const Contact = () => {
   return (
-    <div className="mt-[800px] w-full justify-center flex mb-[50px]">
+    <div className="mt-[1300px] w-full justify-center flex mb-[50px]">
       <div className="flex flex-col">
         <div className="text-center text-3xl font-semibold">
           Want to chat?
