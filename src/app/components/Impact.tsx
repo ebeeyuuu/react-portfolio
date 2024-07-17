@@ -2,7 +2,7 @@ import React from 'react'
 
 const Impact = () => {
   return (
-    <div className="h-[calc(55vh-5rem)] w-full absolute -z-10 dark-wave-clip mt-[50px] max-md:h-[1200px]">
+    <div className="h-[calc(55vh-5rem)] w-full absolute dark-wave-clip mt-[50px] max-md:h-[1200px]">
       <div className="flex justify-center mt-[240px] max-md:mt-[355px]">
         <div className="flex flex-col">
           <div className="text-5xl font-bold ml-auto mb-[30px] max-md:text-center max-md:ml-0">

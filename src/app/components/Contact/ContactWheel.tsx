@@ -83,7 +83,7 @@ const ContactWheel = () => {
           border-radius: 5px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
             rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          transition: 0.2s ease-in-out;
+          transition: 0.5s ease-in-out;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -95,7 +95,7 @@ const ContactWheel = () => {
         .card3:hover,
         .card4:hover {
           cursor: pointer;
-          transform: scale(1.2);
+          transform: scale(1.15);
         }
       `}</style>
     </div>
