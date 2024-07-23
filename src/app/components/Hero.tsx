@@ -15,7 +15,7 @@ const Hero = () => {
             <strong>Hi!</strong> My name is
           </div>
           <div className="text-5xl font-bold max-md:text-3xl smooth-animation mt-[20px]">
-            Ean James Yu
+            Ean Yu
           </div>
           <div className="text-xl max-md:text-base mt-[30px] smooth-animation w-[400px] max-[1000px]:w-[350px]">
             and I am a <strong>UI/UX designer</strong> who makes web apps!
