@@ -8,7 +8,7 @@ import { BiSolidHelpCircle } from 'react-icons/bi'
 const NavBar = React.memo(() => {
   const links = [
     { href: "#about", label: "About", icon: <FaHome className="mt-[3px] max-sm:mt-[1px]" /> },
-    { href: "#projects", label: "Works", icon: <BsFillPeopleFill className="mt-[4px] max-sm:mt-[2px]" /> },
+    { href: "#projects", label: "Projects", icon: <BsFillPeopleFill className="mt-[4px] max-sm:mt-[2px]" /> },
     { href: "#contact", label: "Contact", icon: <BiSolidHelpCircle className="mt-[4px] max-sm:mt-[2px]" /> },
   ];
 
