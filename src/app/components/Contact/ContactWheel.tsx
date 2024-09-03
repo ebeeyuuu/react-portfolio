@@ -9,7 +9,7 @@ import TwitterIcon from "../Icons/TwitterIcon";
 const ContactWheel = () => {
   const [showCopyPopup, setShowCopyPopup] = useState(false);
 
-  const handleCopyDiscordId = (e) => {
+  const handleCopyDiscordId = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const discordID = "720463952706011159";
     navigator.clipboard
