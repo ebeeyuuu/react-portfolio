@@ -9,13 +9,12 @@ const About = () => {
         <div className="text-4xl font-semibold flex justify-center mt-16">
           About Me
         </div>
-        <div className="ml-10">
-          {/* Experience Section */}
-          <div className="flex flex-row max-[1022px]:flex-col max-[1000px]:items-center">
+        <div>
+          <div className="flex gap-x-10 justify-center flex-row max-[1022px]:flex-col max-[1000px]:items-center">
             <div className="font-semibold text-2xl flex justify-center">
               Experience:
             </div>
-            <div className="flex ml-auto mr-10 mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5 max-[1000px]:ml-0 max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
+            <div className="flex mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5 max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
               With three years of experience in Python, HTML, CSS, JavaScript,
               TypeScript, React, and Next.js, I am a frontend developer and
               co-founder of Me2. I create engaging applications and websites,
@@ -26,12 +25,11 @@ const About = () => {
             </div>
           </div>
 
-          {/* Education Section */}
-          <div className="flex flex-row mt-10 max-[1022px]:flex-col max-[1000px]:items-center">
+          <div className="flex gap-x-10 justify-center flex-row mt-10 max-[1022px]:flex-col max-[1000px]:items-center">
             <div className="font-semibold text-2xl justify-center ">
               Education:
             </div>
-            <div className="flex ml-auto mr-10 mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5 max-[1000px]:ml-0 max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
+            <div className="flex mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5  max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
               I spent a decade at Surabaya European School, benefiting from its
               vibrant, inclusive environment that values academic excellence and
               cultural diversity. Passionate educators foster a love for
@@ -46,11 +44,11 @@ const About = () => {
           </div>
 
           {/* Life Story Section */}
-          <div className="flex flex-row mt-10 max-[1022px]:flex-col max-[1000px]:items-center">
-            <div className="font-semibold text-2xl ml-12 max-[1000px]:ml-[-10px] max-[1000px]:justify-center max-sm:ml-[-40px]">
+          <div className="flex gap-x-10 justify-center flex-row mt-10 max-[1022px]:flex-col max-[1000px]:items-center">
+            <div className="font-semibold text-2xl   max-[1000px]:justify-center ">
               Life Story:
             </div>
-            <div className="flex ml-auto mr-10 mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5 max-[1000px]:ml-0 max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
+            <div className="flex  mt-1 text-balance w-[450px] font-mono max-[1000px]:mt-5  max-[1000px]:items-center max-[1000px]:text-center max-[860px]:w-[380px] max-[800px]:w-[300px]">
               My coding journey began with skepticism but transformed into a
               passion through experimenting with Scratch. Transitioning to
               Python deepened my interest, and the pandemic led me to learn
