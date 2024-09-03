@@ -38,16 +38,18 @@ const ContactWheel = () => {
         </a>
       </div>
       <div className="down">
-        <a href="https://github.com/ebeeyuuu" target="_blank">
+        <a
+          href="https://github.com/ebeeyuuu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="card3">
             <GithubIcon className="text-black" />
           </button>
         </a>
-        <a onClick={handleCopyDiscordId}>
-          <button className="card4">
-            <DiscordIcon className="text-black" />
-          </button>
-        </a>
+        <button className="card4" onClick={handleCopyDiscordId}>
+          <DiscordIcon className="text-black" />
+        </button>
       </div>
 
       {/* Copy Popup */}
