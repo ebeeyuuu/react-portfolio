@@ -17,7 +17,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    const images = document.querySelectorAll('.image-accordion-item img');
+    const images = document.querySelectorAll(".image-accordion-item img");
     let loadedCount = 0;
 
     const handleImageLoad = () => {
@@ -28,18 +28,18 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
     };
 
     images.forEach((image) => {
-      const img = image as HTMLImageElement; // Type assertion to HTMLImageElement
+      const img = image as HTMLImageElement;
       if (img.complete) {
         handleImageLoad();
       } else {
-        img.addEventListener('load', handleImageLoad);
+        img.addEventListener("load", handleImageLoad);
       }
     });
 
     return () => {
       images.forEach((image) => {
-        const img = image as HTMLImageElement; // Type assertion to HTMLImageElement
-        img.removeEventListener('load', handleImageLoad);
+        const img = image as HTMLImageElement;
+        img.removeEventListener("load", handleImageLoad);
       });
     };
   }, []);
@@ -58,17 +58,19 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
         .image-accordion-item {
           position: relative;
           overflow: hidden;
-          width: 100px; /* Initial width, adjust as needed */
-          height: 500px; /* Initial height, adjust as needed */
+          width: 100px;
+          height: 500px;
           border-radius: 15px;
           display: flex;
           align-items: flex-end;
-          opacity: ${imagesLoaded ? 1 : 0}; /* Hide images until loaded */
-          transition: opacity 500ms ease; /* Smooth transition */
+          opacity: ${imagesLoaded ? 1 : 0};
+          transition:
+            width 0.5s ease,
+            opacity 0.5s ease;
         }
 
         .image-accordion-item:hover {
-          opacity: 0.75;
+          opacity: 0.9;
         }
 
         .image-accordion :is(h2, p) {
@@ -87,7 +89,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
         }
 
         .image-accordion-item.active {
-          width: 500px; /* Expanded width when active, adjust as needed */
+          width: 500px;
           opacity: 1;
         }
 
@@ -106,7 +108,7 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 500px; /* Adjust width for active state */
+          width: 500px;
           z-index: 1;
           opacity: 0;
           visibility: hidden;
@@ -114,8 +116,14 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
           display: flex;
           align-items: center;
           gap: 14px;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-          transition: 500ms;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1)
+          );
+          transition:
+            opacity 0.5s ease,
+            visibility 0.5s ease;
         }
 
         .image-accordion-item.active .content {
@@ -133,43 +141,48 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
           width: 100%;
           object-fit: cover;
           filter: grayscale(0.6);
+          transition: transform 0.5s ease;
+        }
+
+        .image-accordion-item.active img {
+          transform: translate(-50%, -50%) scale(1.1);
         }
 
         @media not all and (min-width: 1024px) {
           .image-accordion {
             gap: 7.5px;
           }
-        
+
           .image-accordion-item {
             width: 75px;
             height: 375px;
           }
 
           .image-accordion-item.active {
-            width: 375px; /* Adjust width for active state */
+            width: 375px;
           }
 
           .image-accordion-item .content {
-            width: 375px; /* Adjust width for active state */
+            width: 375px;
           }
 
           @media not all and (min-width: 770px) {
             .image-accordion {
               gap: 5px;
             }
-          
+
             .image-accordion-item {
               width: 50px;
               height: 250px;
             }
 
             .image-accordion-item.active {
-              width: 250px; /* Adjust width for active state */
+              width: 250px;
             }
 
             .image-accordion-item .content {
-              width: 250px; /* Adjust width for active state */
-            }  
+              width: 250px;
+            }
 
             .image-accordion-item h2 {
               font-size: 22.5px;
@@ -186,19 +199,19 @@ export const AccordionModal: React.FC<AccordionModalProps> = ({ items }) => {
             .image-accordion {
               gap: 4px;
             }
-          
+
             .image-accordion-item {
               width: 40px;
               height: 200px;
             }
 
             .image-accordion-item.active {
-              width: 200px; /* Adjust width for active state */
+              width: 200px;
             }
 
             .image-accordion-item .content {
-              width: 200px; /* Adjust width for active state */
-            }  
+              width: 200px;
+            }
 
             .image-accordion-item h2 {
               font-size: 15.5px;

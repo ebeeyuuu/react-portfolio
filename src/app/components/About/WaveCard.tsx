@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 interface WaveCardProps {
   children: ReactNode;
@@ -57,6 +57,6 @@ const WaveCard: React.FC<WaveCardProps> = ({ children }) => {
       `}</style>
     </div>
   );
-}
+};
 
 export default WaveCard;
