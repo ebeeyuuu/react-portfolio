@@ -40,7 +40,7 @@ const HeroCloudBackground: React.FC = () => {
 
   return (
     <canvas
-      className="w-full absolute top-0 -z-10 h-[200vh]"
+      className="w-full absolute top-0 -z-10 h-[150vh]"
       ref={canvasRef}
       style={{
         clipPath:
