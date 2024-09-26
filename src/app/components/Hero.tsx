@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import SpinningCube from "./Hero/SpinningCube";
-import Button3D from "./Hero/Button3D";
 import TechsMarquee from "./Hero/TechsMarquee";
 
 import AOS from "aos";
@@ -43,13 +42,13 @@ const Hero = () => {
           >
             and I am a <strong>UI/UX designer</strong> who makes web apps!
           </div>
-          <div
-            className="flex max-[1000px]:justify-end smooth-animation"
+          <button
+            className="flex max-[1000px]:justify-end smooth-animation scale-100 hover:scale-110 rounded-xl px-5 py-3 text-lg font-medium bg-black/50 backdrop-blur-lg mt-6"
             data-aos="fade-up"
             data-aos-delay="550"
           >
-            <Button3D />
-          </div>
+            Learn more
+          </button>
         </div>
       </div>
       <TechsMarquee />
