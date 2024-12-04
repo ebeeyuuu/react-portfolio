@@ -1,6 +1,6 @@
-"use client"
-import { useState, useEffect } from "react"
-import Loader from "./components/Loader"
+"use client";
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader";
 import HeroCloudBackground from "./components/Hero/HeroCloudBackground";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
@@ -35,8 +35,6 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth">
-      <HeroCloudBackground />
-      <NavBar />
       <Hero />
       <About />
       <Projects />
